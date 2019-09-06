@@ -16,14 +16,26 @@ public class User {
 	private Date creationDate; //创建时间
 	private Integer modifyBy;     //更新者
 	private Date modifyDate;   //更新时间
-	private String roleName;
+	private String userRoleName;
 
-	public String getRoleName() {
-		return roleName;
-	}
-
-	public void setRoleName(String roleName) {
-		this.roleName = roleName;
+	@Override
+	public String toString() {
+		return "User{" +
+				"id=" + id +
+				", userCode='" + userCode + '\'' +
+				", userName='" + userName + '\'' +
+				", userPassword='" + userPassword + '\'' +
+				", gender=" + gender +
+				", birthday=" + birthday +
+				", phone='" + phone + '\'' +
+				", address='" + address + '\'' +
+				", userRole=" + userRole +
+				", createdBy=" + createdBy +
+				", creationDate=" + creationDate +
+				", modifyBy=" + modifyBy +
+				", modifyDate=" + modifyDate +
+				", userRoleName='" + userRoleName + '\'' +
+				'}';
 	}
 
 	public Integer getId() {
@@ -105,23 +117,5 @@ public class User {
 		this.modifyDate = modifyDate;
 	}
 
-	@Override
-	public String toString() {
-		return "User{" +
-				"id=" + id +
-				", userCode='" + userCode + '\'' +
-				", userName='" + userName + '\'' +
-				", userPassword='" + userPassword + '\'' +
-				", gender=" + gender +
-				", birthday=" + birthday +
-				", phone='" + phone + '\'' +
-				", address='" + address + '\'' +
-				", userRole=" + userRole +
-				", createdBy=" + createdBy +
-				", creationDate=" + creationDate +
-				", modifyBy=" + modifyBy +
-				", modifyDate=" + modifyDate +
-				", roleName='" + roleName + '\'' +
-				'}';
-	}
+
 }
